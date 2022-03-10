@@ -1,0 +1,50 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+.segment {
+  width: 500px;
+  border-bottom: none;
+  overflow: hidden;
+
+}
+
+.segment.active .segment__inner {
+  visibility: visible;
+  margin-top: 0px;
+
+}
+
+.overflow-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.segment__title {
+  display: flex;
+  align-items: center;
+
+  padding: 0 10px;
+  height: 40px;
+  border: 1px solid gainsboro;
+  border-top: none;
+}
+
+.segment:first-child .segment__title {
+  border-top: 1px solid gainsboro;
+}
+
+.segment__title:hover {
+  cursor: pointer;
+}
+
+
+.segment__inner {
+  padding: 10px 10px;
+  margin-top: -100%;
+  visibility: hidden;
+  transition: .4s linear;
+  border: 1px solid gainsboro;
+  border-top: none;
+}
